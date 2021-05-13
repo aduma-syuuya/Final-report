@@ -23,7 +23,7 @@ import javax.persistence.Table;
             ),
     @NamedQuery(
             name="getReportsCount",
-            query="SELECT COUNT(R) FROM Report AS r"
+            query="SELECT COUNT(r) FROM Report AS r"
             )
 })
 @Entity
@@ -37,7 +37,7 @@ public class Report {
     @JoinColumn(name="employee_id",nullable=false)
     private Employee employee;
 
-    @Column(name="report_date,nullable=false")
+    @Column(name="report_date",nullable=false)
     private Date report_date;
 
     @Column(name="title",length=255,nullable=false)
