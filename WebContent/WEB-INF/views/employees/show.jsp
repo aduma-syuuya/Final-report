@@ -5,6 +5,8 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${employee != null }">
+                <h2>id：${employee.id} の従業員情報　詳細ページ</h2>
+
                 <table>
                     <tbody>
                         <tr>
@@ -33,7 +35,7 @@
                         <tr>
                             <th>更新日時</th>
                             <td>
-                                <fmt:formatDate value="${employee.created_at }" pattern="yyyy-MM-dd HH:mm:ss"/>
+                                <fmt:formatDate value="${employee.updated_at }" pattern="yyyy-MM-dd HH:mm:ss"/>
                             </td>
                         </tr>
                     </tbody>
